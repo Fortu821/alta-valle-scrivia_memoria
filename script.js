@@ -3,7 +3,6 @@
    script.js
    ============================================= */
 
-
 const PAESI = [
   {
     id: "busalla",
@@ -17,9 +16,9 @@ const PAESI = [
           {
             id: "busalla-wwi-1",
             nome: "Lapide ai Caduti della Guerra di Liberazione",
-            descrizione: "Il monumento commemora specificamente i caduti busallesi nella Guerra tra il 1943 e il 1945.",
+            descrizione: "Il monumento commemora specificamente i caduti busallesi nella Guerra tra il 1943 e il 1945. Situato nel centro cittadino, riporta i nomi di coloro che sacrificarono la vita per la libertà.",
             coordinate: [44.570849265622854, 8.945058420363281],
-            foto: [] // Aggiungi qui i percorsi delle foto: ["foto1.jpg", "foto2.jpg"]
+            foto: []
           }
         ]
       },
@@ -31,37 +30,37 @@ const PAESI = [
           {
             id: "busalla-wwii-1",
             nome: "Lapide ai Caduti della Seconda Guerra Mondiale",
-            descrizione: "Il monumento ricorda i caduti busallesi nella Seconda Guerra Mondiale. Eretto nel dopoguerra dalla comunità locale, riporta i nomi di tutti i cittadini che persero la vita nel conflitto.",
+            descrizione: "Monumento commemorativo che ricorda i caduti busallesi nella Seconda Guerra Mondiale. Eretto nel dopoguerra dalla comunità locale, riporta i nomi di tutti i cittadini che persero la vita nel conflitto.",
             coordinate: [44.5680, 8.9456],
-            foto: [] // Aggiungi qui i percorsi delle foto: ["foto1.jpg", "foto2.jpg"]
+            foto: ["images/caduti_busalla.png"]
           },
           {
             id: "busalla-wwii-2",
             nome: "Viale della Rimembranza",
-            descrizione: "Il monumento ricorda i caduti busallesi nella Seconda Guerra Mondiale. Eretto nel dopoguerra dalla comunità locale, riporta i nomi di tutti i cittadini che persero la vita nel conflitto.",
-            coordinate: [44.5680, 8.9456],
-            foto: [] // Aggiungi qui i percorsi delle foto: ["foto1.jpg", "foto2.jpg"]
+            descrizione: "Un percorso alberato dedicato ai caduti busallesi della Seconda Guerra Mondiale. Ogni albero del viale è accompagnato da una targa che ricorda un cittadino scomparso, creando un memoriale vivente nel cuore della città.",
+            coordinate: [44.5683, 8.9449],
+            foto: ["images/sarissola2ù.png"]
           },
           {
             id: "busalla-wwii-3",
             nome: "Lapide ai Caduti di Sarissola",
-            descrizione: "Il monumento ricorda i caduti busallesi nella Seconda Guerra Mondiale. Eretto nel dopoguerra dalla comunità locale, riporta i nomi di tutti i cittadini che persero la vita nel conflitto.",
-            coordinate: [44.5680, 8.9456],
-            foto: [] // Aggiungi qui i percorsi delle foto: ["foto1.jpg", "foto2.jpg"]
+            descrizione: "Lapide collocata nella frazione di Sarissola per onorare i caduti della comunità locale durante la Seconda Guerra Mondiale. Riporta i nomi degli abitanti di Sarissola che persero la vita nel conflitto.",
+            coordinate: [44.5675, 8.9470],
+            foto: ["images/sarissola.png", "images/sarissola2ù.png"]
           },
           {
             id: "busalla-wwii-4",
             nome: "Monumento ai Caduti a stele",
-            descrizione: "Il monumento ricorda i caduti busallesi nella Seconda Guerra Mondiale. Eretto nel dopoguerra dalla comunità locale, riporta i nomi di tutti i cittadini che persero la vita nel conflitto.",
-            coordinate: [44.5680, 8.9456],
-            foto: [] // Aggiungi qui i percorsi delle foto: ["foto1.jpg", "foto2.jpg"]
+            descrizione: "Una stele commemorativa in marmo dedicata ai caduti busallesi della Seconda Guerra Mondiale. La forma slanciata verso l'alto simboleggia il sacrificio e l'elevazione spirituale di chi ha dato la vita per la patria.",
+            coordinate: [44.5692, 8.9445],
+            foto: ["images/caduti-busalla2.png"]
           },
           {
             id: "busalla-wwii-5",
             nome: "Casa di Enrico Macciò",
-            descrizione: "Il monumento ricorda i caduti busallesi nella Seconda Guerra Mondiale. Eretto nel dopoguerra dalla comunità locale, riporta i nomi di tutti i cittadini che persero la vita nel conflitto.",
-            coordinate: [44.5680, 8.9456],
-            foto: [] // Aggiungi qui i percorsi delle foto: ["foto1.jpg", "foto2.jpg"]
+            descrizione: "Abitazione storica di Enrico Macciò, figura di spicco della Resistenza e della vita politica busallese. L'edificio, situato nel centro storico, testimonia l'impegno civile e il contributo alla lotta di Liberazione offerti da Macciò e dalla sua famiglia.",
+            coordinate: [44.5700, 8.9465],
+            foto: []
           }
         ]
       },
@@ -75,18 +74,17 @@ const PAESI = [
             nome: "Lastra alla S.M.S. Liberi Operai",
             descrizione: "Una lastra in marmo nero che ricorda i fondatori della società caduti come partigiani durante la lotta di Liberazione.",
             coordinate: [44.5690, 8.9460],
-            foto: []
+            foto: ["images/SMS-liberi-operai.png"]
           },
           {
             id: "busalla-resist-2",
             nome: "Piazza della Liberazione",
-            descrizione: "Area centrale dove durante le celebrazioni ufficiali del Comune di Busalla vengono deposte le corone in onore della Resistenza.",
+            descrizione: "Area centrale dove durante le celebrazioni ufficiali del Comune di Busalla vengono deposte le corone in onore della Resistenza. La piazza è il fulcro della memoria collettiva della comunità.",
             coordinate: [44.5690, 8.9460],
             foto: []
           }
         ]
       }
-      
     ]
   },
   {
@@ -101,7 +99,7 @@ const PAESI = [
           {
             id: "ronco-wwi-1",
             nome: "Monumento ai Caduti della Grande Guerra",
-            descrizione: "Il monumento, situato nel centro di Ronco Scrivia, è dedicato ai caduti ronchesi nella Prima Guerra Mondiale (1915–1918). La struttura in pietra riporta i nomi dei soldati del paese.",
+            descrizione: "Il monumento, situato nel centro di Ronco Scrivia, è dedicato ai caduti ronchesi nella Prima Guerra Mondiale (1915–1918). La struttura in pietra riporta i nomi dei soldati del paese che non fecero ritorno dal fronte.",
             coordinate: [44.614045061000105, 8.950102581265275],
             foto: []
           }
@@ -115,16 +113,16 @@ const PAESI = [
           {
             id: "ronco-wwii-1",
             nome: "Monumento ai Caduti della Seconda Guerra Mondiale",
-            descrizione: "Una lastra marmorea posta il 25 Aprile 1955 nel Palazzo Comunale, che commemora i sacrifici per la libertà e onora i Morti per la Patria",
+            descrizione: "Una lastra marmorea posta il 25 Aprile 1955 nel Palazzo Comunale, che commemora i sacrifici per la libertà e onora i Morti per la Patria.",
             coordinate: [44.608257, 8.955073],
-            foto: []
+            foto: ["images/medaglia_bronzo_ronco_resist.png"]
           },
           {
             id: "ronco-wwii-2",
             nome: "Bomba Inesplosa",
-            descrizione: "Una bomba Inesplosa posta sul binario 4 della stazione di Ronco, simbolo dei bombardamenti sulla Valle",
+            descrizione: "Una bomba inesplosa della Seconda Guerra Mondiale, conservata come simbolo presso il binario 4 della stazione di Ronco Scrivia. Rappresenta il drammatico ricordo dei bombardamenti che colpirono la Valle Scrivia.",
             coordinate: [44.6020, 8.9510],
-            foto: []
+            foto: ["images/bomba_inseplosa.png"]
           }
         ]
       },
@@ -136,7 +134,7 @@ const PAESI = [
           {
             id: "ronco-resist-1",
             nome: "Lapide a Egidio Dedè (John)",
-            descrizione: "Lapide dedicata al giovane partigiano ucciso nel 1943 a Vobbietta mentre soccorreva un prigioniero tedesco ferito. Per questo gesto di umanità durante la guerra ricevette la Medaglia d'Argento al Valore Militare",
+            descrizione: "Lapide dedicata al giovane partigiano ucciso nel 1943 a Vobbietta mentre soccorreva un prigioniero tedesco ferito. Per questo gesto di umanità durante la guerra ricevette la Medaglia d'Argento al Valore Militare.",
             coordinate: [44.612177, 8.950795],
             foto: []
           },
@@ -184,27 +182,26 @@ const PAESI = [
           {
             id: "montoggio-resist-1",
             nome: "Monumento ai Caduti della Resistenza",
-            descrizione: "Monumento dedicato ai partigiani della brigata che operò sulle alture di Montoggio durante la Resistenza. Il sito è meta ogni anno di pellegrinaggi commemorativi.",
+            descrizione: "Monumento eretto nel centro di Montoggio per onorare i partigiani caduti durante la lotta di Liberazione. Il memoriale, visitato ogni anno durante le celebrazioni ufficiali, è simbolo del contributo della comunità montoggiana alla Resistenza.",
             coordinate: [44.5210, 9.0090],
             foto: []
           },
           {
             id: "montoggio-resist-2",
             nome: "Cippo dell'Eccidio di Cravasco",
-            descrizione: "Monumento dedicato ai partigiani della brigata che operò sulle alture di Montoggio durante la Resistenza. Il sito è meta ogni anno di pellegrinaggi commemorativi.",
+            descrizione: "Un cippo commemorativo che segna il luogo dell'eccidio di Cravasco, dove diversi partigiani persero la vita durante un rastrellamento nazifascista. Posto lungo il sentiero, ricorda il sacrificio di questi combattenti per la libertà.",
             coordinate: [44.5210, 9.0090],
-            foto: []
+            foto: ["images/cravasco.png"]
           },
           {
             id: "montoggio-resist-3",
-            nome: "Il Sacrario e la Cappella Commemorativa",
-            descrizione: "Monumento dedicato ai partigiani della brigata che operò sulle alture di Montoggio durante la Resistenza. Il sito è meta ogni anno di pellegrinaggi commemorativi.",
+            nome: "Sacrario e la Cappella Commemorativa",
+            descrizione: "Il Sacrario e la Cappella Commemorativa di Montoggio custodiscono le spoglie e la memoria dei partigiani caduti. Il complesso monumentale, immerso nella quiete dell'Appennino, è luogo di raccoglimento e di pellegrinaggio civile.",
             coordinate: [44.5210, 9.0090],
-            foto: []
+            foto: ["images/cravasco2.png"]
           }
         ]
       }
-
     ]
   },
   {
@@ -219,311 +216,316 @@ const PAESI = [
           {
             id: "savignone-wwi-1",
             nome: "Monumento ai Caduti di Savignone",
-            descrizione: "Monumento dedicato ai caduti di Savignone nella Prima Guerra Mondiale, situato nella piazza principale del paese.",
+            descrizione: "Monumento dedicato ai caduti di Savignone nella Prima Guerra Mondiale, situato nella piazza principale del paese. Riporta i nomi dei cittadini che sacrificarono la vita durante il conflitto 1915–1918.",
             coordinate: [44.5590, 8.9910],
             foto: []
           },
           {
             id: "savignone-wwi-2",
             nome: "Ex Colonia Montana di Monte Maggio",
-            descrizione: "Monumento dedicato ai caduti di Savignone nella Prima Guerra Mondiale, situato nella piazza principale del paese.",
+            descrizione: "L'Ex Colonia Montana di Monte Maggio, edificata in epoca fascista, fu utilizzata durante le guerre come struttura di accoglienza e ricovero. Oggi l'edificio, sebbene in stato di abbandono, rappresenta una testimonianza storica del patrimonio architettonico e sociale del territorio savignonese.",
             coordinate: [44.5590, 8.9910],
-            foto: []
+            foto: ["images/ex_colonia_monte_maggio.png"]
           }
-
-          
         ]
       }
     ]
   },
   {
-  id: "isola-del-cantone",
-  nome: "Isola del Cantone",
-  categorie: [
-    {
-      id: "wwi",
-      nome: "Prima Guerra Mondiale",
-      classe: "cat-wwi",
-      luoghi: [
-        {
-          id: "isola-wwi-1",
-          nome: "Monumento ai Caduti di Nino Italia",
-          descrizione: "Importante monumento bronzeo realizzato nel 1927 dallo scultore Nino Italia.",
-          coordinate: [44.6462, 8.8865],
-          foto: []
-        },
-        {
-          id: "isola-wwi-2",
-          nome: "Memoriale dei Caduti Isolani",
-          descrizione: "Grande lapide decorata con il testo del Bollettino della Vittoria del 1918.",
-          coordinate: [44.6464, 8.8867],
-          foto: []
-        },
-        {
-          id: "isola-wwi-3",
-          nome: "Lapide del Circolo Silvio Pellico",
-          descrizione: "Lapide dedicata ai giovani del circolo cattolico locale caduti nella Grande Guerra.",
-          coordinate: [44.6460, 8.8870],
-          foto: []
-        }
-      ]
-    },
-    {
-      id: "wwii",
-      nome: "Seconda Guerra Mondiale",
-      classe: "cat-wwii",
-      luoghi: [
-        {
-          id: "isola-wwii-1",
-          nome: "Lapide Commemorativa di Frazione Borlasca",
-          descrizione: "Lapide rurale dedicata ai caduti delle due guerre mondiali della frazione Borlasca.",
-          coordinate: [44.6520, 8.8950],
-          foto: []
-        }
-      ]
-    }
-  ]
-},
+    id: "isola-del-cantone",
+    nome: "Isola del Cantone",
+    categorie: [
+      {
+        id: "wwi",
+        nome: "Prima Guerra Mondiale",
+        classe: "cat-wwi",
+        luoghi: [
+          {
+            id: "isola-wwi-1",
+            nome: "Monumento ai Caduti di Nino Italia",
+            descrizione: "Importante monumento bronzeo realizzato nel 1927 dallo scultore Nino Italia. La scultura commemora i caduti isolani della Prima Guerra Mondiale con una potente figura allegorica.",
+            coordinate: [44.6462, 8.8865],
+            foto: []
+          },
+          {
+            id: "isola-wwi-2",
+            nome: "Memoriale dei Caduti Isolani",
+            descrizione: "Grande lapide decorata con il testo del Bollettino della Vittoria del 1918. Il memoriale celebra il sacrificio dei soldati di Isola del Cantone e la vittoria finale nella Grande Guerra.",
+            coordinate: [44.6464, 8.8867],
+            foto: []
+          },
+          {
+            id: "isola-wwi-3",
+            nome: "Lapide del Circolo Silvio Pellico",
+            descrizione: "Lapide dedicata ai giovani del circolo cattolico locale caduti nella Grande Guerra. Il Circolo Silvio Pellico mantenne vivo il ricordo dei suoi soci scomparsi al fronte.",
+            coordinate: [44.6460, 8.8870],
+            foto: []
+          }
+        ]
+      },
+      {
+        id: "wwii",
+        nome: "Seconda Guerra Mondiale",
+        classe: "cat-wwii",
+        luoghi: [
+          {
+            id: "isola-wwii-1",
+            nome: "Lapide Commemorativa di Frazione Borlasca",
+            descrizione: "Lapide rurale dedicata ai caduti delle due guerre mondiali della frazione Borlasca. Posta all'ingresso della frazione, ricorda i giovani del luogo che non fecero ritorno a casa.",
+            coordinate: [44.6520, 8.8950],
+            foto: []
+          }
+        ]
+      }
+    ]
+  },
   {
-  id: "casella",
-  nome: "Casella",
-  categorie: [
-    {
-      id: "wwii",
-      nome: "Seconda Guerra Mondiale",
-      classe: "cat-wwii",
-      luoghi: [
-        {
-          id: "casella-wwii-1",
-          nome: "Monumento ai Caduti delle Guerre Mondiali",
-          descrizione: "Principale monumento civico di Casella situato accanto alla Chiesa di Santo Stefano.",
-          coordinate: [44.5359, 8.9976],
-          foto: []
-        },
-        {
-          id: "casella-wwii-2",
-          nome: "Lapide d'Onore ai Caduti Civili",
-          descrizione: "Lapide urbana che ricorda il sacrificio della popolazione civile durante la guerra.",
-          coordinate: [44.5365, 8.9981],
-          foto: []
-        }
-      ]
-    },
-    {
-      id: "resist",
-      nome: "Resistenza Partigiana",
-      classe: "cat-resist",
-      luoghi: [
-        {
-          id: "casella-resist-1",
-          nome: "Cippo alla Memoria dei Partigiani della 'Pinan Cichero'",
-          descrizione: "Cippo dedicato ai sei partigiani fucilati a Casella nel dicembre 1944.",
-          coordinate: [44.5370, 8.9990],
-          foto: []
-        }
-      ]
-    },
-    {
-      id: "storico",
-      nome: "Memoria Storica",
-      classe: "cat-wwi",
-      luoghi: [
-        {
-          id: "casella-storico-1",
-          nome: "Memoriale Storico del Trenino di Casella",
-          descrizione: "Esposizione monumentale di una storica carrozza della linea Genova-Casella.",
-          coordinate: [44.5355, 8.9970],
-          foto: []
-        }
-      ]
-    }
-  ]
-},
+    id: "casella",
+    nome: "Casella",
+    categorie: [
+      {
+        id: "wwii",
+        nome: "Seconda Guerra Mondiale",
+        classe: "cat-wwii",
+        luoghi: [
+          {
+            id: "casella-wwii-1",
+            nome: "Monumento ai Caduti delle Guerre Mondiali",
+            descrizione: "Principale monumento civico di Casella situato accanto alla Chiesa di Santo Stefano. Il monumento onora i caduti di entrambe le guerre mondiali ed è il fulcro delle commemorazioni ufficiali del paese.",
+            coordinate: [44.5359, 8.9976],
+            foto: []
+          },
+          {
+            id: "casella-wwii-2",
+            nome: "Lapide d'Onore ai Caduti Civili",
+            descrizione: "Lapide urbana che ricorda il sacrificio della popolazione civile durante la Seconda Guerra Mondiale. Una testimonianza delle sofferenze patite dalla comunità di Casella a causa dei bombardamenti e dell'occupazione.",
+            coordinate: [44.5365, 8.9981],
+            foto: []
+          }
+        ]
+      },
+      {
+        id: "resist",
+        nome: "Resistenza Partigiana",
+        classe: "cat-resist",
+        luoghi: [
+          {
+            id: "casella-resist-1",
+            nome: "Cippo alla Memoria dei Partigiani della 'Pinan Cichero'",
+            descrizione: "Cippo dedicato ai sei partigiani fucilati a Casella nel dicembre 1944. Appartenevano alla formazione 'Pinan Cichero' e furono catturati durante un rastrellamento nazifascista.",
+            coordinate: [44.5370, 8.9990],
+            foto: ["images/pinan-cichero.png"]
+          }
+        ]
+      },
+      {
+        id: "storico",
+        nome: "Memoria Storica",
+        classe: "cat-wwi",
+        luoghi: [
+          {
+            id: "casella-storico-1",
+            nome: "Memoriale Storico del Trenino di Casella",
+            descrizione: "Esposizione monumentale di una storica carrozza della linea Genova-Casella. La ferrovia a scartamento ridotto, attiva dal 1929, è un simbolo del patrimonio storico e culturale della Valle Scrivia.",
+            coordinate: [44.5355, 8.9970],
+            foto: []
+          }
+        ]
+      }
+    ]
+  },
   {
-  id: "crocefieschi",
-  nome: "Crocefieschi",
-  categorie: [
-    {
-      id: "wwi",
-      nome: "Prima Guerra Mondiale",
-      classe: "cat-wwi",
-      luoghi: [
-        {
-          id: "croce-wwi-1",
-          nome: "Lastre Commemorative ai Caduti",
-          descrizione: "Quattro grandi lapidi marmoree nella Chiesa di Santa Croce dedicate ai caduti delle due guerre mondiali.",
-          coordinate: [44.6228, 9.0017],
-          foto: []
-        }
-      ]
-    },
-    {
-      id: "resist",
-      nome: "Resistenza Partigiana",
-      classe: "cat-resist",
-      luoghi: [
-        {
-          id: "croce-resist-1",
-          nome: "Cappella degli Alpini di Crebaia",
-          descrizione: "Piccola cappella monumentale curata dal Gruppo Alpini e situata lungo i sentieri del Monte Proventino.",
-          coordinate: [44.6260, 9.0100],
-          foto: []
-        },
-        {
-          id: "croce-resist-2",
-          nome: "Monumento-Crocifisso alla Resistenza Partigiana",
-          descrizione: "Grande croce lignea con lapide dedicata ai partigiani della Valle Scrivia.",
-          coordinate: [44.6200, 9.0050],
-          foto: []
-        }
-      ]
-    }
-  ]
-},
+    id: "crocefieschi",
+    nome: "Crocefieschi",
+    categorie: [
+      {
+        id: "wwi",
+        nome: "Prima Guerra Mondiale",
+        classe: "cat-wwi",
+        luoghi: [
+          {
+            id: "croce-wwi-1",
+            nome: "Lastre Commemorative ai Caduti",
+            descrizione: "Quattro grandi lapidi marmoree collocate nella Chiesa di Santa Croce. Sono dedicate ai caduti di Crocefieschi nelle due guerre mondiali e riportano incisi i nomi dei cittadini scomparsi.",
+            coordinate: [44.6228, 9.0017],
+            foto: []
+          }
+        ]
+      },
+      {
+        id: "resist",
+        nome: "Resistenza Partigiana",
+        classe: "cat-resist",
+        luoghi: [
+          {
+            id: "croce-resist-1",
+            nome: "Cappella degli Alpini di Crebaia",
+            descrizione: "Piccola cappella monumentale curata dal Gruppo Alpini e situata lungo i sentieri del Monte Proventino. Dedicata alla memoria degli alpini e dei partigiani che operarono nella zona.",
+            coordinate: [44.6260, 9.0100],
+            foto: []
+          },
+          {
+            id: "croce-resist-2",
+            nome: "Monumento-Crocifisso alla Resistenza Partigiana",
+            descrizione: "Grande croce lignea con lapide dedicata ai partigiani della Valle Scrivia. Il crocifisso, eretto in posizione panoramica, domina la vallata e ricorda il sacrificio per la libertà.",
+            coordinate: [44.6200, 9.0050],
+            foto: []
+          }
+        ]
+      }
+    ]
+  },
   {
-  id: "torriglia",
-  nome: "Torriglia",
-  categorie: [
-    {
-      id: "wwii",
-      nome: "Seconda Guerra Mondiale",
-      classe: "cat-wwii",
-      luoghi: [
-        {
-          id: "torriglia-wwii-1",
-          nome: "Monumento a Cippo ai Caduti",
-          descrizione: "Monumento situato nei giardini comunali con cippo, braciere bronzeo e lastre commemorative dedicate ai caduti delle guerre mondiali.",
-          coordinate: [44.5217, 9.1570],
-          foto: []
-        }
-      ]
-    },
-    {
-      id: "resist",
-      nome: "Resistenza Partigiana",
-      classe: "cat-resist",
-      luoghi: [
-        {
-          id: "torriglia-resist-1",
-          nome: "Lapide ai Caduti Partigiani della Difesa al Ponte",
-          descrizione: "Grande lapide commemorativa dedicata ai partigiani caduti il 24 agosto 1944 durante la difesa del ponte cittadino.",
-          coordinate: [44.5225, 9.1582],
-          foto: []
-        },
-        {
-          id: "torriglia-resist-2",
-          nome: "Lastre Monumentali ad Aldo Gastaldi 'Bisagno'",
-          descrizione: "Trittico marmoreo commemorativo dedicato ad Aldo Gastaldi e alla Resistenza ligure.",
-          coordinate: [44.5220, 9.1565],
-          foto: []
-        },
-        {
-          id: "torriglia-resist-3",
-          nome: "Cippo dei Casoni di Torriglia",
-          descrizione: "Cippo immerso nei sentieri dell'Antola dedicato a tre partigiani caduti durante i rastrellamenti.",
-          coordinate: [44.5300, 9.1700],
-          foto: []
-        },
-        {
-          id: "torriglia-resist-4",
-          nome: "Monumento di Pian dell'Orso",
-          descrizione: "Memoriale montano restaurato dal Gruppo Alpini dedicato ai partigiani e ai caduti dell'entroterra.",
-          coordinate: [44.5450, 9.1820],
-          foto: []
-        }
-      ]
-    }
-  ]
-},
+    id: "torriglia",
+    nome: "Torriglia",
+    categorie: [
+      {
+        id: "wwii",
+        nome: "Seconda Guerra Mondiale",
+        classe: "cat-wwii",
+        luoghi: [
+          {
+            id: "torriglia-wwii-1",
+            nome: "Monumento a Cippo ai Caduti",
+            descrizione: "Monumento situato nei giardini comunali con cippo, braciere bronzeo e lastre commemorative dedicate ai caduti delle guerre mondiali. È il principale memoriale civico di Torriglia.",
+            coordinate: [44.5217, 9.1570],
+            foto: []
+          }
+        ]
+      },
+      {
+        id: "resist",
+        nome: "Resistenza Partigiana",
+        classe: "cat-resist",
+        luoghi: [
+          {
+            id: "torriglia-resist-1",
+            nome: "Lapide ai Caduti Partigiani della Difesa al Ponte",
+            descrizione: "Grande lapide commemorativa dedicata ai partigiani caduti il 24 agosto 1944 durante la difesa del ponte cittadino di Torriglia contro le truppe nazifasciste.",
+            coordinate: [44.5225, 9.1582],
+            foto: []
+          },
+          {
+            id: "torriglia-resist-2",
+            nome: "Lastre Monumentali ad Aldo Gastaldi 'Bisagno'",
+            descrizione: "Trittico marmoreo commemorativo dedicato ad Aldo Gastaldi 'Bisagno', leggendario comandante partigiano della Divisione Cichero, e alla Resistenza ligure.",
+            coordinate: [44.5220, 9.1565],
+            foto: []
+          },
+          {
+            id: "torriglia-resist-3",
+            nome: "Cippo dei Casoni di Torriglia",
+            descrizione: "Cippo immerso nei sentieri del Monte Antola, dedicato a tre partigiani caduti durante i rastrellamenti nazifascisti nella zona dei Casoni di Torriglia.",
+            coordinate: [44.5300, 9.1700],
+            foto: []
+          },
+          {
+            id: "torriglia-resist-4",
+            nome: "Monumento di Pian dell'Orso",
+            descrizione: "Memoriale montano restaurato dal Gruppo Alpini di Torriglia. Dedicato ai partigiani e ai caduti dell'entroterra ligure, si trova in una delle aree più suggestive dell'Appennino.",
+            coordinate: [44.5450, 9.1820],
+            foto: []
+          }
+        ]
+      }
+    ]
+  },
   {
-  id: "valbrevenna",
-  nome: "Valbrevenna",
-  categorie: [
-    {
-      id: "wwii",
-      nome: "Seconda Guerra Mondiale",
-      classe: "cat-wwii",
-      luoghi: [
-        {
-          id: "valbrevenna-wwii-1",
-          nome: "Monumento ai Caduti delle Guerre",
-          descrizione: "Memoriale ufficiale del comune situato a Molino di Altoggio, dedicato ai caduti della Prima e Seconda Guerra Mondiale.",
-          coordinate: [44.6180, 9.0230],
-          foto: []
-        },
-        {
-          id: "valbrevenna-wwii-2",
-          nome: "Cippo Commemorativo della Frazione Frassinello",
-          descrizione: "Lapide monumentale dedicata ai giovani della frazione e ai tragici rastrellamenti della Seconda Guerra Mondiale.",
-          coordinate: [44.6230, 9.0400],
-          foto: []
-        }
-      ]
-    },
-    {
-      id: "resist",
-      nome: "Resistenza Partigiana",
-      classe: "cat-resist",
-      luoghi: [
-        {
-          id: "valbrevenna-resist-1",
-          nome: "Sentiero della Memoria e Cippo di Carsi",
-          descrizione: "Cippo immerso nei boschi dell'Appennino dedicato ai partigiani della Divisione 'Cichero'.",
-          coordinate: [44.6280, 9.0600],
-          foto: []
-        },
-        {
-          id: "valbrevenna-resist-2",
-          nome: "Cappella-Memoriale del Monte Antola",
-          descrizione: "Piccola cappella montana che ricorda i partigiani della VI Zona Operativa sulle pendici del Monte Antola.",
-          coordinate: [44.5770, 9.1420],
-          foto: []
-        }
-      ]
-    }
-  ]
-},
+    id: "valbrevenna",
+    nome: "Valbrevenna",
+    categorie: [
+      {
+        id: "wwii",
+        nome: "Seconda Guerra Mondiale",
+        classe: "cat-wwii",
+        luoghi: [
+          {
+            id: "valbrevenna-wwii-1",
+            nome: "Monumento ai Caduti delle Guerre",
+            descrizione: "Memoriale ufficiale del comune situato a Molino di Altoggio, dedicato ai caduti della Prima e Seconda Guerra Mondiale. Il monumento è il centro delle celebrazioni istituzionali della Valbrevenna.",
+            coordinate: [44.6180, 9.0230],
+            foto: []
+          },
+          {
+            id: "valbrevenna-wwii-2",
+            nome: "Cippo Commemorativo della Frazione Frassinello",
+            descrizione: "Lapide monumentale dedicata ai giovani della frazione di Frassinello e ai tragici rastrellamenti della Seconda Guerra Mondiale che colpirono la comunità locale.",
+            coordinate: [44.6230, 9.0400],
+            foto: []
+          }
+        ]
+      },
+      {
+        id: "resist",
+        nome: "Resistenza Partigiana",
+        classe: "cat-resist",
+        luoghi: [
+          {
+            id: "valbrevenna-resist-1",
+            nome: "Sentiero della Memoria e Cippo di Carsi",
+            descrizione: "Cippo immerso nei boschi dell'Appennino dedicato ai partigiani della Divisione 'Cichero'. Il sentiero della memoria conduce i visitatori attraverso i luoghi simbolo della Resistenza in Valbrevenna.",
+            coordinate: [44.6280, 9.0600],
+            foto: []
+          },
+          {
+            id: "valbrevenna-resist-2",
+            nome: "Cappella-Memoriale del Monte Antola",
+            descrizione: "Piccola cappella montana che ricorda i partigiani della VI Zona Operativa sulle pendici del Monte Antola. Un luogo di pace e memoria raggiungibile attraverso i sentieri escursionistici della zona.",
+            coordinate: [44.5770, 9.1420],
+            foto: []
+          }
+        ]
+      }
+    ]
+  },
   {
-  id: "vobbia",
-  nome: "Vobbia",
-  categorie: [
-    {
-      id: "resist",
-      nome: "Resistenza Partigiana",
-      classe: "cat-resist",
-      luoghi: [
-        {
-          id: "vobbia-resist-1",
-          nome: "Lastra e Lapide ai Martiri della Benedicta",
-          descrizione: "Situato nel borgo capoluogo, questo commovente complesso monumentale è composto da una lapide e da una lastra affiancate in marmo bianco, separate al centro da una lampada votiva in bronzo. L'opera ricorda i giovani della zona caduti durante la Strage della Benedicta dell'aprile 1944.",
-          coordinate: [44.6007, 9.0382],
-          foto: []
-        },
-        {
-          id: "vobbia-resist-2",
-          nome: "Lastra Commemorativa di Mario Cesura 'Giovanni'",
-          descrizione: "Lastra commemorativa dedicata al giovane partigiano Mario Cesura della Brigata Garibaldi 'Oreste', ucciso durante il rastrellamento del 18 dicembre 1944.",
-          coordinate: [44.6110, 9.0520],
-          foto: []
-        },
-        {
-          id: "vobbia-resist-3",
-          nome: "Lastra a Franco Eugenio",
-          descrizione: "Lapide commemorativa dedicata a Franco Eugenio, ucciso dalle truppe d'occupazione il 18 dicembre 1944 dopo l'incendio della sua abitazione.",
-          coordinate: [44.5980, 9.0400],
-          foto: []
-        },
-        {
-          id: "vobbia-wwi-1",
-          nome: "Lapide ai Caduti di Arezzo-Vobbia",
-          descrizione: "Lapide in marmo bianco dedicata ai soldati della frazione caduti durante la Prima Guerra Mondiale.",
-          coordinate: [44.6050, 9.0280],
-          foto: []
-        }
-      ]
-    }
-  ]
-}
+    id: "vobbia",
+    nome: "Vobbia",
+    categorie: [
+      {
+        id: "wwi",
+        nome: "Prima Guerra Mondiale",
+        classe: "cat-wwi",
+        luoghi: [
+          {
+            id: "vobbia-wwi-1",
+            nome: "Lapide ai Caduti di Arezzo-Vobbia",
+            descrizione: "Lapide in marmo bianco dedicata ai soldati della frazione caduti durante la Prima Guerra Mondiale. Posta nella chiesa locale, riporta i nomi dei giovani del borgo che non tornarono dal fronte.",
+            coordinate: [44.6050, 9.0280],
+            foto: []
+          }
+        ]
+      },
+      {
+        id: "resist",
+        nome: "Resistenza Partigiana",
+        classe: "cat-resist",
+        luoghi: [
+          {
+            id: "vobbia-resist-1",
+            nome: "Lastra e Lapide ai Martiri della Benedicta",
+            descrizione: "Situato nel borgo capoluogo, questo commovente complesso monumentale è composto da una lapide e da una lastra affiancate in marmo bianco, separate al centro da una lampada votiva in bronzo. L'opera ricorda i giovani della zona caduti durante la Strage della Benedicta dell'aprile 1944.",
+            coordinate: [44.6007, 9.0382],
+            foto: []
+          },
+          {
+            id: "vobbia-resist-2",
+            nome: "Lastra Commemorativa di Mario Cesura 'Giovanni'",
+            descrizione: "Lastra commemorativa dedicata al giovane partigiano Mario Cesura 'Giovanni' della Brigata Garibaldi 'Oreste', ucciso durante il rastrellamento del 18 dicembre 1944.",
+            coordinate: [44.6110, 9.0520],
+            foto: []
+          },
+          {
+            id: "vobbia-resist-3",
+            nome: "Lastra a Franco Eugenio",
+            descrizione: "Lapide commemorativa dedicata a Franco Eugenio, ucciso dalle truppe d'occupazione il 18 dicembre 1944 dopo l'incendio della sua abitazione a Vobbia.",
+            coordinate: [44.5980, 9.0400],
+            foto: []
+          }
+        ]
+      }
+    ]
+  }
 ];
 
 const ITINERARI = [
@@ -531,7 +533,7 @@ const ITINERARI = [
     id: "cammino-ribelli",
     nome: "Il Cammino dei Ribelli",
     sottotitolo: "Resistenza Partigiana",
-    descrizione: "Un percorso che ripercorre i sentieri attraversati dai partigiani durante la Seconda Guerra Mondiale. Il Cammino dei Ribelli attraversa sentieri tra la ValleScrivia e la ValBorbera, con un dislivello che supera i 1000 metri",
+    descrizione: "Un percorso che ripercorre i sentieri attraversati dai partigiani durante la Seconda Guerra Mondiale. Il Cammino dei Ribelli attraversa sentieri tra la Valle Scrivia e la Val Borbera, con un dislivello che supera i 1000 metri.",
     distanza: "117,2 km",
     durata: "7 giorni (7 tappe)",
     difficolta: "Impegnativa",
@@ -543,8 +545,7 @@ const ITINERARI = [
       { nome: "FontanaChiusa", desc: "Cammino tra borghi abbandonati, mulini nascosti e valichi montani dell’Appennino ribelle", coord: [44.610452803010574, 9.17616893579048] },
       { nome: "Dova", desc: "Attraversamento di borghi montani, guadi e sentieri d’altura verso le valli dello Spinti", coord: [44.62859524202806, 9.11529161535405] },
       { nome: "Roccaforte", desc: "Traversata tra borghi appenninici, santuari in pietra e sentieri nel bosco, con saliscendi panoramici fino alla discesa verso Arquata Scrivia", coord: [44.677555127492425, 9.027874699831573] },
-      { nome: "Arquata Scrivia ", desc: "Ritorno alla stazione, fine del percorso", coord: [44.692101407603666, 8.884882098771474] },
-
+      { nome: "Arquata Scrivia ", desc: "Ritorno alla stazione, fine del percorso", coord: [44.692101407603666, 8.884882098771474] }
     ]
   }
 ];

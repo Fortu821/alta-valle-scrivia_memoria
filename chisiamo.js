@@ -30,56 +30,56 @@ const TRADUZIONI_CS = {
     chisiamo: "About Us",
     progetto: "The Project",
     chisiamo_testo: [
-      "Lorem ipsum EN — Chi siamo paragrafo 1.",
-      "Lorem ipsum EN — Chi siamo paragrafo 2.",
-      "Lorem ipsum EN — Chi siamo paragrafo 3."
+      "EN — Chi siamo paragrafo 1.",
+      "EN — Chi siamo paragrafo 2.",
+      "EN — Chi siamo paragrafo 3."
     ],
     progetto_testo: [
-      "Lorem ipsum EN — Progetto paragrafo 1.",
-      "Lorem ipsum EN — Progetto paragrafo 2.",
-      "Lorem ipsum EN — Progetto paragrafo 3."
+      "EN — Progetto paragrafo 1.",
+      "EN — Progetto paragrafo 2.",
+      "EN — Progetto paragrafo 3."
     ]
   },
   fr: {
     chisiamo: "Qui Sommes-Nous",
     progetto: "Le Projet",
     chisiamo_testo: [
-      "Lorem ipsum FR — Chi siamo paragrafo 1.",
-      "Lorem ipsum FR — Chi siamo paragrafo 2.",
-      "Lorem ipsum FR — Chi siamo paragrafo 3."
+      "FR — Chi siamo paragrafo 1.",
+      "FR — Chi siamo paragrafo 2.",
+      "FR — Chi siamo paragrafo 3."
     ],
     progetto_testo: [
-      "Lorem ipsum FR — Progetto paragrafo 1.",
-      "Lorem ipsum FR — Progetto paragrafo 2.",
-      "Lorem ipsum FR — Progetto paragrafo 3."
+      "FR — Progetto paragrafo 1.",
+      "FR — Progetto paragrafo 2.",
+      "FR — Progetto paragrafo 3."
     ]
   },
   de: {
     chisiamo: "Über Uns",
     progetto: "Das Projekt",
     chisiamo_testo: [
-      "Lorem ipsum DE — Chi siamo paragrafo 1.",
-      "Lorem ipsum DE — Chi siamo paragrafo 2.",
-      "Lorem ipsum DE — Chi siamo paragrafo 3."
+      "DE — Chi siamo paragrafo 1.",
+      "DE — Chi siamo paragrafo 2.",
+      "DE — Chi siamo paragrafo 3."
     ],
     progetto_testo: [
-      "Lorem ipsum DE — Progetto paragrafo 1.",
-      "Lorem ipsum DE — Progetto paragrafo 2.",
-      "Lorem ipsum DE — Progetto paragrafo 3."
+      "DE — Progetto paragrafo 1.",
+      "DE — Progetto paragrafo 2.",
+      "DE — Progetto paragrafo 3."
     ]
   },
   es: {
     chisiamo: "Quiénes Somos",
     progetto: "El Proyecto",
     chisiamo_testo: [
-      "Lorem ipsum ES — Chi siamo paragrafo 1.",
-      "Lorem ipsum ES — Chi siamo paragrafo 2.",
-      "Lorem ipsum ES — Chi siamo paragrafo 3."
+      "ES — Chi siamo paragrafo 1.",
+      "ES — Chi siamo paragrafo 2.",
+      "ES — Chi siamo paragrafo 3."
     ],
     progetto_testo: [
-      "Lorem ipsum ES — Progetto paragrafo 1.",
-      "Lorem ipsum ES — Progetto paragrafo 2.",
-      "Lorem ipsum ES — Progetto paragrafo 3."
+      "ES — Progetto paragrafo 1.",
+      "ES — Progetto paragrafo 2.",
+      "ES — Progetto paragrafo 3."
     ]
   }
 };

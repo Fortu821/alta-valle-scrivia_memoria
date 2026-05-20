@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luoghi della Memoria — Val Scrivia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="header-title">
+        <!-- TODO: decidere icona per la schermata di benvenuto -->
+        <div>
+          <h1>Luoghi della Memoria</h1>
+          <p class="header-subtitle">Alta-Valle Scrivia — Un viaggio nella storia</p>
+        </div>
+      </div>
+      <div class="search-wrap">
+        <input type="text" id="search-input" placeholder="Cerca un luogo..." oninput="cercaLuogo(this.value)" />
+        <div class="search-results" id="search-results"></div>
+      </div>
+      <nav class="header-nav">
+        <a href="chisiamo.html" class="nav-link">Chi siamo</a>
+        <a href="#" class="nav-link">Esplora</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- LAYOUT PRINCIPALE -->
+  <div class="app-layout">
+
+    <!-- PANNELLO SINISTRO -->
+    <aside class="sidebar">
+
+      <!-- TABS -->
+      <div class="tabs">
+        <button class="tab active" data-tab="paesi" onclick="switchTab('paesi')">Paese</button>
+        <button class="tab" data-tab="itinerari" onclick="switchTab('itinerari')">Itinerario</button>
+      </div>
+
+      <!-- TAB PAESI -->
+      <div id="tab-paesi" class="tab-content active">
+        <p class="sidebar-label">Seleziona un paese</p>
+        <ul class="paese-list" id="paese-list"></ul>
+      </div>
+
+      <!-- TAB ITINERARI -->
+      <div id="tab-itinerari" class="tab-content">
+        <p class="sidebar-label">Seleziona un itinerario</p>
+        <ul class="itinerario-list" id="itinerario-list"></ul>
+      </div>
+
+      <!-- SELETTORE LINGUA -->
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('it')">IT</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('fr')">FR</button>
+        <button class="lang-btn" onclick="setLang('de')">DE</button>
+        <button class="lang-btn" onclick="setLang('es')">ES</button>
+      </div>
+
+    </aside>
+
+    <!-- PANNELLO DESTRO -->
+    <main class="detail-panel" id="detail-panel">
+
+      <!-- STATO INIZIALE -->
+      <div class="empty-state" id="empty-state">
+        <!-- TODO: decidere icona/logo per l'header -->
+        <h2>Benvenuto</h2>
+        <p>Seleziona un paese o un itinerario<br>per scoprire i luoghi della memoria<br>della Alta-Valle Scrivia.</p>
+      </div>
+
+      <!-- CONTENUTO LUOGO (nascosto inizialmente) -->
+      <div class="place-detail" id="place-detail" style="display:none;">
+        <div class="detail-breadcrumb" id="detail-breadcrumb"></div>
+        <h2 class="detail-title" id="detail-title"></h2>
+
+        <div class="detail-photos" id="detail-photos"></div>
+
+        <div class="detail-description" id="detail-description"></div>
+
+        <div class="detail-map-wrap">
+          <div id="detail-map"></div>
+        </div>
+
+        <button class="btn-arrivarci" id="btn-arrivarci" onclick="apriArrivarci()">
+          Come arrivarci →
+        </button>
+      </div>
+
+      <!-- CONTENUTO ITINERARIO (nascosto inizialmente) -->
+      <div class="itinerario-detail" id="itinerario-detail" style="display:none;">
+        <div class="detail-breadcrumb">Itinerario</div>
+        <h2 class="detail-title" id="itinerario-title"></h2>
+        <p class="itinerario-desc" id="itinerario-desc"></p>
+        <div class="itinerario-meta" id="itinerario-meta"></div>
+        <div class="itinerario-tappe" id="itinerario-tappe"></div>
+        <div class="detail-map-wrap">
+          <div id="itinerario-map"></div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "nome": "Monumento ai Caduti di Ronco Scrivia",
+    "categoria": "WWI",
+    "descrizione": "Monumento dedicato ai caduti della Prima Guerra Mondiale...",
+    "citta": "Ronco Scrivia",
+    "coordinate": { "lat": 44.6034, "lng": 8.9456 }
+  }
+]

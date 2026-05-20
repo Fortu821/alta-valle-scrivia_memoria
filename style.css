@@ -1,0 +1,653 @@
+/* =============================================
+   LUOGHI DELLA MEMORIA — VAL SCRIVIA
+   style.css
+   ============================================= */
+
+:root {
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Source Sans 3', sans-serif;
+
+  --bg:        #f7f4ef;
+  --surface:   #ffffff;
+  --sidebar-bg:#1e2a1e;
+  --sidebar-surface: #2a3a2a;
+  --accent:    #8b1a1a;
+  --accent2:   #c9a84c;
+  --text:      #1a1a1a;
+  --text-muted:#6b6b6b;
+  --text-light:#a0a0a0;
+  --border:    rgba(0,0,0,0.10);
+
+  --cat-wwi:    #7a4f2e;
+  --cat-wwii:   #2e4a7a;
+  --cat-resist: #2e6b3a;
+  --cat-olocausto: #5a3070;
+  --cat-mafia:  #7a2e2e;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- HEADER ---- */
+header {
+  background: var(--sidebar-bg);
+  color: #fff;
+  padding: 0 32px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--accent2);
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header-dove {
+  font-size: 22px;
+  color: var(--accent2);
+}
+
+header h1 {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #fff;
+}
+
+.header-subtitle {
+  font-size: 12px;
+  color: var(--accent2);
+  letter-spacing: 0.08em;
+  margin-top: 1px;
+}
+
+.header-nav { display: flex; gap: 24px; }
+
+.nav-link {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.2s;
+  letter-spacing: 0.03em;
+}
+
+.nav-link:hover, .nav-link.active { color: var(--accent2); }
+
+/* ---- LAYOUT ---- */
+.app-layout {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 64px);
+  overflow: hidden;
+}
+
+/* ---- SIDEBAR ---- */
+.sidebar {
+  width: 280px;
+  min-width: 280px;
+  background: var(--sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  flex-shrink: 0;
+}
+
+.tab {
+  flex: 1;
+  padding: 14px 0;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.45);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.tab:hover { color: rgba(255,255,255,0.75); }
+
+.tab.active {
+  color: var(--accent2);
+  border-bottom-color: var(--accent2);
+}
+
+/* TAB CONTENT */
+.tab-content { display: none; flex-direction: column; overflow-y: auto; flex: 1; }
+.tab-content.active { display: flex; }
+
+.sidebar-label {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  padding: 16px 18px 8px;
+  flex-shrink: 0;
+}
+
+/* LISTA PAESI */
+.paese-list, .itinerario-list {
+  list-style: none;
+  padding: 0 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.paese-item {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.paese-nome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 12px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+  user-select: none;
+}
+
+.paese-nome:hover { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.9); }
+.paese-nome.open { color: #fff; background: rgba(255,255,255,0.08); }
+
+.paese-arrow {
+  font-size: 11px;
+  transition: transform 0.25s;
+  color: rgba(255,255,255,0.3);
+}
+.paese-nome.open .paese-arrow { transform: rotate(90deg); color: var(--accent2); }
+
+/* CATEGORIE */
+.categorie-list {
+  list-style: none;
+  padding: 0 0 4px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.categoria-item { border-radius: 5px; overflow: hidden; }
+
+.categoria-nome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.15s, color 0.15s;
+  user-select: none;
+  gap: 8px;
+}
+
+.categoria-nome:hover { background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.8); }
+.categoria-nome.open { color: #fff; }
+
+.cat-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cat-wwi    { background: var(--cat-wwi); }
+.cat-wwii   { background: var(--cat-wwii); }
+.cat-resist { background: var(--cat-resist); }
+.cat-olocausto { background: var(--cat-olocausto); }
+.cat-mafia  { background: var(--cat-mafia); }
+
+.cat-arrow {
+  font-size: 10px;
+  transition: transform 0.2s;
+  color: rgba(255,255,255,0.25);
+  margin-left: auto;
+}
+.categoria-nome.open .cat-arrow { transform: rotate(90deg); color: var(--accent2); }
+
+/* LUOGHI SOTTO CATEGORIA */
+.luoghi-list {
+  list-style: none;
+  padding: 0 0 4px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.luogo-item {
+  padding: 6px 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.15s, color 0.15s;
+  border-left: 2px solid transparent;
+}
+
+.luogo-item:hover {
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.75);
+}
+
+.luogo-item.selected {
+  color: var(--accent2);
+  border-left-color: var(--accent2);
+  background: rgba(201,168,76,0.08);
+}
+
+/* ITINERARI */
+.itinerario-item {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+  border-left: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.itinerario-item:hover { background: rgba(255,255,255,0.06); color: #fff; }
+.itinerario-item.selected {
+  color: var(--accent2);
+  border-left-color: var(--accent2);
+  background: rgba(201,168,76,0.08);
+}
+
+.itinerario-item-subtitle {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+}
+.itinerario-item.selected .itinerario-item-subtitle { color: rgba(201,168,76,0.6); }
+
+/* ---- PANNELLO DESTRO ---- */
+.detail-panel {
+  flex: 1;
+  overflow-y: auto;
+  background: var(--bg);
+  padding: 40px 48px;
+}
+
+/* EMPTY STATE */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: var(--text-muted);
+  gap: 16px;
+}
+
+.empty-icon {
+  font-size: 40px;
+  color: var(--accent2);
+  opacity: 0.4;
+}
+
+.empty-state h2 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.empty-state p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* BREADCRUMB */
+.detail-breadcrumb {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+/* TITOLO DETTAGLIO */
+.detail-title {
+  font-family: var(--serif);
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 28px;
+  border-bottom: 2px solid var(--accent2);
+  padding-bottom: 16px;
+}
+
+/* FOTO */
+.detail-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.detail-photo {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
+  width: 100%;
+  background: #ddd;
+}
+
+.photo-placeholder {
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #e8e0d0, #d4c9b0);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* DESCRIZIONE */
+.detail-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 32px;
+  max-width: 700px;
+}
+
+/* MAPPA */
+.detail-map-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  border: 1px solid var(--border);
+  height: 280px;
+}
+
+#detail-map, #itinerario-map { height: 100%; width: 100%; }
+
+/* BOTTONE ARRIVARCI */
+.btn-arrivarci {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-arrivarci:hover {
+  background: #a82020;
+  transform: translateY(-1px);
+}
+
+/* ITINERARIO DETAIL */
+.itinerario-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 24px;
+  max-width: 700px;
+}
+
+.itinerario-meta {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.meta-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meta-label {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.meta-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.itinerario-tappe {
+  margin-bottom: 32px;
+}
+
+.tappe-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.tappa {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: flex-start;
+}
+
+.tappa-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.tappa-info { flex: 1; }
+.tappa-nome { font-size: 15px; font-weight: 600; color: var(--text); }
+.tappa-desc { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+
+/* ANIMAZIONE ENTRATA */
+.place-detail, .itinerario-detail {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* SCROLLBAR */
+.sidebar ::-webkit-scrollbar { width: 4px; }
+.sidebar ::-webkit-scrollbar-track { background: transparent; }
+.sidebar ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+
+.detail-panel::-webkit-scrollbar { width: 6px; }
+.detail-panel::-webkit-scrollbar-track { background: transparent; }
+.detail-panel::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 3px; }
+
+/* ---- MOBILE ---- */
+.sidebar-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .tab-content.active {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  .detail-panel {
+    padding: 24px 20px;
+    height: auto;
+    overflow: visible;
+  }
+
+  .detail-map-wrap {
+    height: 200px;
+  }
+}
+
+/* ---- LINGUA ---- */
+.lang-switcher {
+  display: flex;
+  gap: 6px;
+  padding: 16px 18px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  flex-wrap: wrap;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.lang-btn {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.5);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--sans);
+}
+
+.lang-btn:hover {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+.lang-btn.active {
+  background: var(--accent2);
+  border-color: var(--accent2);
+  color: #1e2a1e;
+}
+
+/* ---- RICERCA ---- */
+.search-wrap {
+  position: relative;
+  margin-right: 16px;
+}
+
+.search-wrap input {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-family: var(--sans);
+  width: 220px;
+  outline: none;
+  transition: background 0.2s, border 0.2s;
+}
+
+.search-wrap input::placeholder { color: rgba(255,255,255,0.35); }
+.search-wrap input:focus {
+  background: rgba(255,255,255,0.13);
+  border-color: var(--accent2);
+}
+
+.search-results {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: #1e2a1e;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 200;
+  display: none;
+}
+
+.search-result-item {
+  padding: 10px 14px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: background 0.15s;
+}
+
+.search-result-item:last-child { border-bottom: none; }
+.search-result-item:hover { background: rgba(255,255,255,0.07); color: #fff; }
+
+.search-result-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  margin-top: 2px;
+}

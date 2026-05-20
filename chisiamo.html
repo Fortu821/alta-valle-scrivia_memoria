@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chi Siamo — Luoghi della Memoria Val Scrivia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="chisiamo.css" />
+</head>
+<body>
+
+  <!-- HEADER (uguale a index.html) -->
+  <header>
+    <div class="header-inner">
+      <div class="header-title">
+        <div>
+          <h1>Luoghi della Memoria</h1>
+          <p class="header-subtitle">Val Scrivia — Un viaggio nella storia</p>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:24px;">
+        <nav class="header-nav">
+          <a href="index.html" class="nav-link">Esplora</a>
+          <a href="chisiamo.html" class="nav-link active">Chi siamo</a>
+        </nav>
+        <!-- SELETTORE LINGUA -->
+        <div class="lang-switcher-header">
+          <button class="lang-btn-h active" onclick="setLang('it')">IT</button>
+          <button class="lang-btn-h" onclick="setLang('en')">EN</button>
+          <button class="lang-btn-h" onclick="setLang('fr')">FR</button>
+          <button class="lang-btn-h" onclick="setLang('de')">DE</button>
+          <button class="lang-btn-h" onclick="setLang('es')">ES</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENUTO -->
+  <main class="chisiamo-main">
+
+    <!-- TAB -->
+    <div class="cs-tabs">
+      <button class="cs-tab active" onclick="switchCS('chisiamo')" id="tab-chisiamo" data-it="Chi Siamo" data-en="About Us" data-fr="Qui Sommes-Nous" data-de="Über Uns" data-es="Quiénes Somos">Chi Siamo</button>
+      <button class="cs-tab" onclick="switchCS('progetto')" id="tab-progetto" data-it="Il Progetto" data-en="The Project" data-fr="Le Projet" data-de="Das Projekt" data-es="El Proyecto">Il Progetto</button>
+    </div>
+
+    <!-- SEZIONE CHI SIAMO -->
+    <section class="cs-section active" id="cs-chisiamo">
+      <h2 class="cs-title" id="cs-title-chisiamo">Chi Siamo</h2>
+      <div class="cs-content" id="cs-content-chisiamo">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+      </div>
+    </section>
+
+    <!-- SEZIONE IL PROGETTO -->
+    <section class="cs-section" id="cs-progetto">
+      <h2 class="cs-title" id="cs-title-progetto">Il Progetto</h2>
+      <div class="cs-content" id="cs-content-progetto">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="chisiamo.js"></script>
+</body>
+</html>

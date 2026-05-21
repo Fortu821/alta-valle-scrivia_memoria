@@ -18,12 +18,16 @@ const TRADUZIONI_CS = {
     chisiamo_testo: [
       "Siamo la classe 3B della Scuola Media Giovanni Pascoli di Ronco Scrivia e abbiamo realizzato questo sito per raccontare i luoghi della memoria dell’Alta Valle Scrivia.",
       "Attraverso ricerche, fotografie e testimonianze, abbiamo scoperto posti importanti legati alla storia del nostro territorio e alle vicende del passato.",
-      "Il nostro obiettivo è far conoscere e ricordare questi luoghi, per mantenere viva la memoria storica e trasmetterla anche alle nuove generazioni."
+      "Il nostro obiettivo è far conoscere e ricordare questi luoghi, per mantenere viva la memoria storica e trasmetterla anche alle nuove generazioni.",
+      " ",
+      "Email di riferimento: fortu.andre2012@gmail.com "
     ],
     progetto_testo: 
     [
       "Il progetto è stato realizzato grazie al lavoro di tutta la classe 3B. Uno di noi si è occupato della programmazione dell’applicazione utilizzando HTML5, JavaScript e CSS, creando il sito e le sue funzionalità, mentre, per la mappa, abbiamo utilizzato strumenti liberi come Leaflet e OpenStreetMap",
-      "Altri compagni, invece, hanno svolto ricerche storiche, raccolto informazioni, scattato fotografie ed effettuato sopralluoghi nei luoghi della memoria dell’Alta Valle Scrivia, contribuendo alla realizzazione dei contenuti del progetto."
+      "Altri compagni, invece, hanno svolto ricerche storiche, raccolto informazioni, scattato fotografie ed effettuato sopralluoghi nei luoghi della memoria dell’Alta Valle Scrivia, contribuendo alla realizzazione dei contenuti del progetto.",
+      " ",
+      "Email di riferimento: fortu.andre2012@gmail.com"
     ]
   },
   en: {

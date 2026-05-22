@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collabora — Luoghi della Memoria Val Scrivia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="collabora.css" />
+</head>
+<body>
+
+  <!-- HEADER (identico a index.html e chisiamo.html) -->
+  <header>
+    <div class="header-inner">
+      <div class="header-title">
+        <div>
+          <h1>Luoghi della Memoria</h1>
+          <p class="header-subtitle">Val Scrivia — Un viaggio nella storia</p>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:24px;">
+        <nav class="header-nav">
+          <a href="index.html" class="nav-link">Esplora</a>
+          <a href="chisiamo.html" class="nav-link">Chi siamo</a>
+          <a href="collabora.html" class="nav-link active">Collabora</a>
+        </nav>
+        <!-- SELETTORE LINGUA -->
+        <div class="lang-switcher-header">
+          <button class="lang-btn-h active" onclick="setLang('it')">IT</button>
+          <button class="lang-btn-h" onclick="setLang('en')">EN</button>
+          <button class="lang-btn-h" onclick="setLang('fr')">FR</button>
+          <button class="lang-btn-h" onclick="setLang('de')">DE</button>
+          <button class="lang-btn-h" onclick="setLang('es')">ES</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENUTO -->
+  <main class="collabora-main">
+
+    <!-- TAB -->
+    <div class="cs-tabs">
+      <button class="cs-tab active" onclick="switchCS('contribuisci')" id="tab-contribuisci">Come contribuire</button>
+      <button class="cs-tab" onclick="switchCS('contattaci')" id="tab-contattaci">Contattaci</button>
+    </div>
+
+    <!-- SEZIONE COME CONTRIBUIRE -->
+    <section class="cs-section active" id="cs-contribuisci">
+      <h2 class="cs-title">Come puoi aiutarci</h2>
+      <div class="cs-content">
+        <p>Memoria in ValleScrivia è nato da un’idea di uno studente, ma può diventare molto di più: un archivio vivo, scritto e fotografato da chi ama questa terra. Non importa se sei un esperto o un semplice appassionato: se hai una foto, un ricordo, un luogo da segnalare o un po’ di tempo libero, c’è un modo per contribuire.</p>
+
+        <div class="contributo-cards">
+          <div class="contributo-card">
+            <div class="contributo-icon">📸</div>
+            <h3>Hai una foto o un documento storico?</h3>
+            <p>Cerca nei cassetti dei nonni, scannerizza una vecchia cartolina, scatta una foto a un monumento che manca sulla mappa. Inviaci il materiale con una breve descrizione: lo aggiungeremo con il tuo nome nei ringraziamenti.</p>
+          </div>
+
+          <div class="contributo-card">
+            <div class="contributo-icon">🗺️</div>
+            <h3>Conosci un luogo che non abbiamo ancora mappato?</h3>
+            <p>Segnalacelo! Mandaci le coordinate, un indirizzo, o semplicemente una descrizione. Manderemo qualcuno a fotografarlo o useremo il tuo contributo per creare la scheda.</p>
+          </div>
+
+          <div class="contributo-card">
+            <div class="contributo-icon">✍️</div>
+            <h3>Vuoi scrivere un aneddoto o una ricerca storica?</h3>
+            <p>Sei un insegnante, uno storico locale, o semplicemente conosci una storia che merita di essere raccontata? Diventa autore di una scheda. Pubblicheremo il tuo testo a tuo nome.</p>
+          </div>
+
+          <div class="contributo-card">
+            <div class="contributo-icon">📱</div>
+            <h3>Vuoi aiutarci con i social media o la comunicazione?</h3>
+            <p>Instagram, Facebook, TikTok: abbiamo bisogno di far conoscere il progetto. Se sei creativo e ami la valle, entra nel nostro team comunicazione.</p>
+          </div>
+
+          <div class="contributo-card">
+            <div class="contributo-icon">🏛️</div>
+            <h3>Sei un Comune, una Pro Loco, un’associazione?</h3>
+            <p>Potete adottare il progetto per il vostro territorio: vi aiuteremo a mappare i vostri luoghi, e voi ci aiuterete con materiali e segnalazioni. Insieme possiamo creare un itinerario dedicato al vostro paese.</p>
+          </div>
+
+          <div class="contributo-card">
+            <div class="contributo-icon">💰</div>
+            <h3>Vuoi sostenerci economicamente?</h3>
+            <p>Il sito è gestito senza scopo di lucro, ma una piccola donazione può coprire il dominio, lo spazio server, o la stampa di mappe cartacee. Se vuoi contribuire, contattaci per maggiori informazioni. Saremo trasparenti su ogni euro speso.</p>
+          </div>
+        </div>
+
+        <p class="ringraziamenti-note">Ogni contributo verrà riconosciuto pubblicamente in questa pagina e nella scheda del luogo, salvo diversa richiesta. Perché questo progetto è fatto dalle persone, per le persone.</p>
+      </div>
+    </section>
+
+    <!-- SEZIONE CONTATTACI -->
+    <section class="cs-section" id="cs-contattaci">
+      <h2 class="cs-title">Scrivici</h2>
+      <div class="cs-content">
+        <p>Usa il modulo qui sotto per inviarci un messaggio. Se preferisci, puoi scriverci direttamente a <a href="mailto:fortu.andre2012@gmail.com">fortu.andre2012@gmail.com</a>.</p>
+
+        <form id="form-contatto" class="contatto-form" action="https://formspree.io/f/xdajzenj" method="POST">
+          <div class="form-group">
+            <label for="nome">Il tuo nome *</label>
+            <input type="text" id="nome" name="nome" required placeholder="Mario Rossi">
+          </div>
+          <div class="form-group">
+            <label for="email">La tua email *</label>
+            <input type="email" id="email" name="email" required placeholder="mario.rossi@email.com">
+          </div>
+          <div class="form-group">
+            <label for="tipo">Tipo di contributo</label>
+            <select id="tipo" name="tipo">
+              <option value="">-- Scegli --</option>
+              <option value="Foto o documento storico">Foto o documento storico</option>
+              <option value="Segnalazione luogo">Segnalazione di un luogo</option>
+              <option value="Scrittura aneddoto/ricerca">Scrittura aneddoto o ricerca</option>
+              <option value="Social media">Aiuto con i social media</option>
+              <option value="Ente/Associazione">Comune, Pro Loco o associazione</option>
+              <option value="Donazione">Sostegno economico</option>
+              <option value="Altro">Altro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="messaggio">Messaggio *</label>
+            <textarea id="messaggio" name="messaggio" rows="6" required placeholder="Descrivi come vorresti contribuire..."></textarea>
+          </div>
+          <button type="submit" class="btn-invia">Invia messaggio ✉️</button>
+        </form>
+
+        <div id="conferma-invio" class="conferma-invio" style="display:none;">
+          <p>✅ Grazie per averci contattato! Ti risponderemo al più presto.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="collabora.js"></script>
+</body>
+</html>

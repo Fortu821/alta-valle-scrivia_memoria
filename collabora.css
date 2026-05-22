@@ -1,0 +1,227 @@
+/* ---- COLLABORA PAGE ---- */
+.collabora-main {
+  max-width: 860px;
+  margin: 60px auto;
+  padding: 0 32px;
+}
+
+/* Stessi tab di chisiamo */
+.cs-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 48px;
+}
+
+.cs-tab {
+  background: none;
+  border: none;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 12px 32px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  letter-spacing: 0.03em;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.cs-tab:hover { color: var(--text); }
+
+.cs-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.cs-section { display: none; }
+.cs-section.active { display: block; animation: fadeIn 0.3s ease; }
+
+.cs-title {
+  font-family: var(--serif);
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 32px;
+  border-bottom: 2px solid var(--accent2);
+  padding-bottom: 16px;
+}
+
+.cs-content p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+/* CARD CONTRIBUTO */
+.contributo-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.contributo-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 24px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.contributo-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  transform: translateY(-2px);
+}
+
+.contributo-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.contributo-card h3 {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.contributo-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.ringraziamenti-note {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 15px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* FORM CONTATTO */
+.contatto-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--text);
+  background: #fff;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--accent2);
+}
+
+.btn-invia {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: background 0.2s, transform 0.15s;
+  align-self: flex-start;
+}
+
+.btn-invia:hover {
+  background: #a82020;
+  transform: translateY(-1px);
+}
+
+.conferma-invio {
+  background: #e6f4ea;
+  border: 1px solid #b7d7c5;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.conferma-invio p {
+  color: #1e4620;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+/* LINGUA NELL'HEADER (stesso di chisiamo) */
+.lang-switcher-header {
+  display: flex;
+  gap: 5px;
+}
+
+.lang-btn-h {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.5);
+  padding: 4px 9px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--sans);
+}
+
+.lang-btn-h:hover {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+}
+
+.lang-btn-h.active {
+  background: var(--accent2);
+  border-color: var(--accent2);
+  color: #1e2a1e;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .collabora-main { margin: 32px auto; padding: 0 20px; }
+  .cs-title { font-size: 28px; }
+  .contributo-cards { grid-template-columns: 1fr; }
+  .contatto-form { padding: 24px; }
+  .btn-invia { width: 100%; text-align: center; }
+  .lang-switcher-header { gap: 3px; }
+  .lang-btn-h { padding: 4px 7px; font-size: 10px; }
+}
